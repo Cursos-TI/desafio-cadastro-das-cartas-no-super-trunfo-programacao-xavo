@@ -38,7 +38,7 @@ int main() {
 
     // Cadastro da primeira carta
 
-    printf("Cadastro da Primeira Carta\n");
+    printf("\n Cadastro da Primeira Carta\n");
 
     printf("Digite o estado:");
     scanf("%s", Estado1);
@@ -63,7 +63,7 @@ int main() {
 
     // Cadastro da segunda carta
 
-    printf(" Cadastro da Segunda Carta\n");
+    printf(" \n Cadastro da Segunda Carta\n");
 
     printf("Digite o estado: ");
     scanf("%s", Estado2);
@@ -87,7 +87,7 @@ int main() {
     scanf("%d", &Ponto_Turistico2);
 
     //Exibição das informações da primeira carta
-    printf("CARTA 1\n");
+    printf("\n CARTA 1\n");
     printf("Estado: %s\n" , Estado1);
     printf("Código: %s\n" , Codigo1);
     printf("Cidade: %s\n" , Cidade1);
@@ -96,7 +96,7 @@ int main() {
     printf("PIB: %.2f milhões\n" , Pib1);
     printf("Ponto Turístico: %d\n", Ponto_Turistico1);
     //Exibição das informações da segunda carta
-    printf("CARTA 2\n");
+    printf("\n CARTA 2\n");
     printf("Estado: %s\n" , Estado2);
     printf("Código: %s\n" , Codigo2);
     printf("Cidade: %s\n" , Cidade2);
