@@ -22,6 +22,9 @@ int main() {
     float Densidade_Populacional1;
     float PIB_per_capita1;
 
+    //Declarando nova variavel - nivel mestre
+    float Super_poder1;
+
     // Declaração das variaveis para segunda carta
 
     char Estado2[20];
@@ -34,6 +37,9 @@ int main() {
     // Declarar duas novas variaveis - nivel aventureiro;
     float Densidade_Populacional2;
     float  PIB_per_capita2;
+
+    //Declarando nova variavel - nivel mestre
+    float Super_poder2;
 
     // Cadastro das Cartas:
     // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
@@ -71,6 +77,7 @@ int main() {
     // Cálculo  das novas variaveis nivel aventureiro;
     Densidade_Populacional1 = (float)População1 / Area1;
     PIB_per_capita1 = Pib1 / População1;
+    Super_poder1 = (float)(População1 + Area1 + Pib1 + PIB_per_capita1 + Ponto_Turistico1 - Densidade_Populacional1);
 
     // Cadastro da segunda carta
 
@@ -100,6 +107,7 @@ int main() {
     // Cálculo  das novas variaveis nivel aventureiro;
     Densidade_Populacional2 = (float)População2 / Area2;
     PIB_per_capita2 = Pib2 / População2;
+    Super_poder2 = (float)(População2 + Area2 + Pib2 + PIB_per_capita2 + Ponto_Turistico2 - Densidade_Populacional2);
 
     //Exibição das informações da primeira carta
     printf("\n CARTA 1\n");
@@ -113,6 +121,7 @@ int main() {
     //Exibição do resultado nivel aventureiro;
     printf("Densidade Populacional: %.2f (hab/km)\n",Densidade_Populacional1);
     printf("Pib per capita: R$ %.2f\n",PIB_per_capita1);
+    printf("O Super Poder é: %.2f\n", Super_poder1);
 
     //Exibição das informações da segunda carta
     printf("\n CARTA 2\n");
@@ -126,9 +135,23 @@ int main() {
     //Exibição do resultado nivel aventureiro;
     printf("Densidade Populacional: %.2f (hab/km)\n",Densidade_Populacional2);
     printf("Pib per capita: R$ %.2f\n",PIB_per_capita2);
+    printf("O Super Poder é: %.2f\n\n", Super_poder2);
 
  
+    //Comparação das duas cartas;
 
+    int resultado;
+    resultado = Super_poder1 > Super_poder2;
 
+    printf("Se %s for maior que %s O resulatdo é 1 se for menor é 0, Resultado: %d\n\n", Estado1,Estado2,resultado);
 
+    printf("População da cidade: %d\n", (População1) > (População2));
+    printf("Área: %d\n", (Area1) > (Area2));
+    printf("O PIB: %d\n", (Pib1) > (Pib2));
+    printf("Pontos Turísticos: %d\n", (Ponto_Turistico1) > (Ponto_Turistico2));
+    printf("A Densidade Populacional: %d\n", (Densidade_Populacional1) > (Densidade_Populacional2));
+    printf("O PIB per capita: %d\n", (PIB_per_capita1) > (PIB_per_capita2));
+    printf("O super poder é: %d\n", (Super_poder1) > (Super_poder2));
+
+    return 0;
 }
